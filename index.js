@@ -13,9 +13,6 @@ const getQuotes = async () => {
         const midData = await data.json();
          realData = JSON.parse(midData.contents);
         getNewQuotes();
-        // console.log(realData.length);
-        // console.log(realData[0].q);
-        // console.log(realData[0].a);
     } catch (error) {
         console.log("Error fetching quotes:", error);
     }
