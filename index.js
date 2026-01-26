@@ -3,14 +3,14 @@ const getQuotes = async () => {
     const proxy = "https://api.allorigins.win/get?url=" + encodeURIComponent(api);
 
     try {
-        const response = await fetch(proxy);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const dataWrapped = await response.json();
-        const data = JSON.parse(dataWrapped.contents); // actual quotes
-        console.log(data);
+        const data = await fetch(proxy);
+        const midData = await data.json();
+        const readData = JSON.parse(midData.contents); // actual quotes
+        console.log(readData);
     } catch (error) {
         console.log("Error fetching quotes:", error);
     }
+
 };
 
 getQuotes();
