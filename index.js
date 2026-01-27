@@ -1,7 +1,7 @@
  let realData = "";
  const getNewQuotes = () => {
     let ranum = Math.floor(Math.random() * 10);
-    console.log(realData[ranum].a);
+    console.log(ranum[10].a);
  };
 
 const getQuotes = async () => {
@@ -12,6 +12,8 @@ const getQuotes = async () => {
         let data = await fetch(proxy);
         const midData = await data.json();
          realData = JSON.parse(midData.contents);
+         console.log(realData[10].a);
+         
         getNewQuotes();
     } catch (error) {
         console.log("Error fetching quotes:", error);
