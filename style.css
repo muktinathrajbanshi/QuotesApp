@@ -150,3 +150,101 @@ body::before {
   transform: scale(1.1);
   box-shadow: 0 0 40px rgba(255, 0, 204, 0.8);
 }
+
+/* ===== Mobile Responsive Design ===== */
+@media (min-width: 1200px) {
+  .box {
+    width: 460px;
+    padding: 2.5rem;
+  }
+
+  .quotes {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  .quotes {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.2rem;
+    background:
+      radial-gradient(circle at top, #ff00cc, transparent 55%),
+      radial-gradient(circle at bottom, #00f2ff, transparent 55%),
+      linear-gradient(180deg, #050505, #0b0b0b);
+  }
+
+  .box {
+    padding: 1.8rem;
+    border-radius: 1.4rem;
+  }
+
+  .text i {
+    font-size: 2.6rem;
+  }
+
+  .quotes {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .author {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .box {
+    width: 100%;
+    padding: 1.4rem;
+    border-radius: 1.2rem;
+    transform: none !important;
+  }
+
+  .number img {
+    width: 30px;
+  }
+
+  .text i {
+    font-size: 2.2rem;
+  }
+
+  .quotes {
+    font-size: 1.15rem;
+  }
+
+  #newQ {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .quotes {
+    font-size: 1.05rem;
+  }
+
+  .author {
+    font-size: 0.8rem;
+  }
+}
