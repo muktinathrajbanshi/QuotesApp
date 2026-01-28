@@ -1,3 +1,4 @@
+ AOS.init();
 const quotes = document.getElementById("quotes");
 const author = document.getElementById("author");
 const newQ = document.getElementById("newQ");
